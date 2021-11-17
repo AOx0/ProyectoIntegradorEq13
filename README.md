@@ -15,7 +15,7 @@ Created by:
   Luis Fernando De León Silva (A01754574)
   Ramón Habib Zavala Rivas (A01641328)
 
-Instituto Tecnologico de Estudios Superiores de Monterrey 
+Instituto Tecnológico de Estudios Superiores de Monterrey 
   
 
   
