@@ -1,5 +1,5 @@
 #include <iostream>
-#include "classShopRequirements.h"
+#include <classInventario.h>
 
 int main() {
     Producto productos[5] = {
