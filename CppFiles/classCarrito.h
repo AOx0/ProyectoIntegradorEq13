@@ -1,13 +1,25 @@
+#pragma once
+
 #include <string>
+
+#include "classUsuario.h"
+#include "classProducto.h"
+
 
 using namespace std;
 
-template <unsigned SIZE>
+
 class Carrito {
 private:
     Usuario datosUsuario;
-    Producto productos[SIZE];
+    int size;
+    Producto (&productos)[];
 public:
-    Carrito(Producto productos[], Usuario datosUsuario);
+    Carrito(Producto c[], int size, Usuario datosUsuario) :
+    productos(reinterpret_cast<Producto (&)[]>(*c)),
+    datosUsuario(datosUsuario),
+    size(size){};
 
+    void mostrarCarrito();
+    void mostrarInventario();
 };

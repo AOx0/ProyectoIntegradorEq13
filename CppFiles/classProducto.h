@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 
 using namespace std;
@@ -10,6 +12,7 @@ private:
 public:
     Producto(double precio, string nombre, int cantidad): precio(precio), nombre(nombre), cantidad(cantidad){};
 
+    double obtenerPrecioTotal();
     void mostrarProducto(int);
 };
 
