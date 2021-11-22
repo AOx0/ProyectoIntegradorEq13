@@ -7,15 +7,17 @@ challenge of a online-shop, using all attributes, objects, etc. as public and pr
 methods, etc. 
 
 For this project, considering all methods of this challenge, the one that will be chosen is a shopping cart as a problem, 
-refering as a problem to solve through classes. All the challenge will be given as a standard C++ code in the .cpp file.
+refering as a problem to solve through classes. All the challenge will be given as a standard C++ code in the .cpp and .h files.
 
-Standard uncoding UTF-8 and C++ library <iostream> and <stdlib.h>. All script files will be ignore, established in the .gitignore. 
+Standard uncoding UTF-8 and C++ library <iostream> and <stdlib.h>. All script files within established in the .gitignore will be ignored.
   
 Created by:
-  Luis Fernando De León Silva (A01754574)
+  Luis Fernando De León Silva (A01754574(
   Ramón Habib Zavala Rivas (A01641328)
 
-Instituto Tecnológico de Estudios Superiores de Monterrey 
+Instituto Tecnológico de Estudios Superiores de Monterrey.
+  
+
   
 
   
