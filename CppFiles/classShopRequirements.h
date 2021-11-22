@@ -4,35 +4,42 @@ using namespace std;
 
 
 
-class producto {
+class Producto {
     private:
         double precio;
         string nombre;
         int cantidad;
     public:
-        producto(double precio, string nombre, int cantidad);
+        Producto(double precio, string nombre, int cantidad): precio(precio), nombre(nombre), cantidad(cantidad){};
+
+        void mostrarProducto(int);
 };
 
 
-template <unsigned SIZE>
-class inventario {
+
+class Inventario {
     private:
-        producto cantidad[SIZE];
+        int size;
+        Producto (&cantidad)[] ;
+    public:
+        Inventario(Producto c[], int size): size(size), cantidad(reinterpret_cast<Producto (&)[]>(*c)) {};
+
+        void MostrarInventario();
 };
 
-class usuario {
+class Usuario {
     private:
         string nombre, direccion;
         int edad;
 };
 
 template <unsigned SIZE>
-class carrito {
+class Carrito {
     private:
-        usuario datosUsuario;
-        producto productos[SIZE];
+        Usuario datosUsuario;
+        Producto productos[SIZE];
     public:
-        carrito(producto productos[], usuario datosUsuario);
+        Carrito(Producto productos[], Usuario datosUsuario);
 
 };
 
