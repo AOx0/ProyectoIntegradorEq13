@@ -2,11 +2,14 @@
 
 using namespace std;
 
-class producto {
-    private:
-        double precio;
-        string nombre;
-        int cantidad;
-    public:
-        producto(double precio, string nombre, int cantidad);
+class Producto {
+private:
+    double precio;
+    string nombre;
+    int cantidad;
+public:
+    Producto(double precio, string nombre, int cantidad): precio(precio), nombre(nombre), cantidad(cantidad){};
+
+    void mostrarProducto(int);
 };
+

@@ -2,12 +2,11 @@
 
 using namespace std;
 
-class usuario {
-    private:
-        string nombre, direccion;
-        int edad;
+class Usuario {
+private:
+    string nombre, direccion;
+    int edad;
 };
-
 
 
 

@@ -18,3 +18,7 @@ bin-release/
 # information for Eclipse / Flash Builder.
 
 .DS_Store
+
+.idea/
+CMakeLists.txt
+cmake-build-debug/
