@@ -1,5 +1,8 @@
+#pragma once
+
 #include <string>
 #include "classProducto.h"
+
 
 using namespace std;
 

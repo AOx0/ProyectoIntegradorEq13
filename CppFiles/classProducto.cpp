@@ -7,3 +7,7 @@ void Producto::mostrarProducto(int num= -1) {
             nombre.c_str(), precio, cantidad
     );
 }
+
+double Producto::obtenerPrecioTotal() {
+    return precio * cantidad;
+}
