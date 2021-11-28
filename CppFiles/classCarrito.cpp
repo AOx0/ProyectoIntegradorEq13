@@ -8,9 +8,12 @@ void Carrito::mostrarCarrito() {
 void Carrito::mostrarInventario() {
     double total = 0;
     printf("\nCarrito: \n");
-    for (int i=0; i<size; i++) {
-        productos[i].mostrarProducto(i);
-        total += productos[i].obtenerPrecioTotal();
+    int i = 0;
+    for (auto prod : aComprar) {
+        prod.mostrarProducto(i);
+        total += prod.obtenerPrecioTotal();
+        i++;
     }
-    printf("A pagar: %lf\n", total);
+
+    i != 0 ? printf("A pagar: %lf\n", total) : printf("Parece que el carrito está vacío :/\n");
 }

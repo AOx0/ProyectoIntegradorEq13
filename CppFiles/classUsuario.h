@@ -10,6 +10,7 @@ private:
     int edad;
 
 public:
+    Usuario():  nombre(""), direccion(""), edad(0) {};
     Usuario(string nombre, string direccion, int edad): nombre(nombre), direccion(direccion), edad(edad){};
 
     void mostrarDatos();

@@ -5,7 +5,8 @@
 
 #include "classUsuario.h"
 #include "classProducto.h"
-
+#include "classInventario.h"
+#include <vector>
 
 using namespace std;
 
@@ -13,10 +14,13 @@ using namespace std;
 class Carrito {
 private:
     Usuario datosUsuario;
-    int size;
-    Producto * productos;
+    Inventario inventario;
+    vector<Producto> aComprar;
 public:
-    Carrito(Producto c[], Usuario datosUsuario) : productos(c), datosUsuario(std::move(datosUsuario)), size(Producto::getSize(c)){};
+    Carrito(Usuario datosUsuario, Inventario inventario)
+    : aComprar(vector<Producto>())
+    , datosUsuario(std::move(datosUsuario))
+    , inventario(inventario) {};
 
     void mostrarCarrito();
     void mostrarInventario();
