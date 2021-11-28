@@ -53,7 +53,7 @@ int main() {
 
         if (id == -3) break;
 
-        if (id < -2 || id > carrito.inventario.getSize()) {puts("Ingresa un ID válido"); continue;}
+        if (id < -2 || id > carrito.inventario.getSize()-1) {puts("Ingresa un ID válido"); continue;}
 
         switch (id) {
             case -1: carrito.inventario.MostrarInventario(); break;
