@@ -41,10 +41,11 @@ int main() {
     while (true) {
         id = 0;
 
-        puts("\nEscriba el ID del producto que desea agregar al carrito");
-        puts("O escriba \"-1\" para mostrar el inventario resultante");
-        puts("O escriba \"-2\" para mostrar el carrito");
-        puts("O escriba \"-3\" para terminar de seleccionar productos");
+        puts("\nEscriba el ID del producto que desea agregar al carrito o");
+        puts("  -1 : Mostrar el inventario resultante");
+        puts("  -2 : Mostrar el carrito actual");
+        puts("  -3 : Terminar de agregar productos");
+
         printf("Su elección: ");
         cin >> id;
 
