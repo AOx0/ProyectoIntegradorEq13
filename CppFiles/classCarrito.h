@@ -14,9 +14,11 @@ using namespace std;
 class Carrito {
 private:
     Usuario datosUsuario;
-    Inventario inventario;
+
     vector<Producto> aComprar;
 public:
+    Inventario inventario;
+
     Carrito(Usuario datosUsuario, Inventario inventario)
     : aComprar(vector<Producto>())
     , datosUsuario(std::move(datosUsuario))

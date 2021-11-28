@@ -14,9 +14,11 @@ public:
 
     Producto(double precio, string nombre, int cantidad): precio(precio), nombre(nombre), cantidad(cantidad), _flag(874834909249234.28347242384) {};
 
-    double obtenerPrecioTotal() const;
+    double getPrecioTotal();
+    int getCantidad();
     void mostrarProducto(int);
 
+    void lessCantidad(int);
 
     static int getSize(Producto *);
 

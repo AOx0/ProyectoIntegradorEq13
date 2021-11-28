@@ -8,7 +8,7 @@ void Producto::mostrarProducto(int num= -1) {
     );
 }
 
-double Producto::obtenerPrecioTotal() const {
+double Producto::getPrecioTotal() {
     return precio * cantidad;
 }
 
@@ -19,4 +19,12 @@ int Producto::getSize(Producto * array) {
         else break;
     }
     return size;
+}
+
+void Producto::lessCantidad(int c = 1) {
+    cantidad -= c;
+}
+
+int Producto::getCantidad() {
+    return cantidad;
 }

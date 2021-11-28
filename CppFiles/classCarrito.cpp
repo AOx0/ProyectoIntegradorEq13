@@ -2,16 +2,12 @@
 
 void Carrito::mostrarCarrito() {
     datosUsuario.mostrarDatos();
-    mostrarInventario();
-}
-
-void Carrito::mostrarInventario() {
     double total = 0;
     printf("\nCarrito: \n");
     int i = 0;
     for (auto prod : aComprar) {
         prod.mostrarProducto(i);
-        total += prod.obtenerPrecioTotal();
+        total += prod.getPrecioTotal();
         i++;
     }
 

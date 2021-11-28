@@ -11,10 +11,12 @@ using namespace std;
 class Inventario {
 private:
     int size;
-    Producto * cantidad ;
+    Producto * producto ;
 public:
 
-    Inventario(Producto c[]): cantidad(c), size(Producto::getSize(c)) {};
+    Inventario(Producto c[]): producto(c), size(Producto::getSize(c)) {};
 
     void MostrarInventario();
+    int getSize() ;
+    bool eliminarProducto(int, int);
 };
