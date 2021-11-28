@@ -13,6 +13,7 @@ using namespace std;
 
 class Carrito {
 private:
+
     Usuario datosUsuario;
 
     vector<Producto> aComprar;
@@ -25,6 +26,6 @@ public:
     , inventario(inventario) {};
 
     void mostrarCarrito();
-    void mostrarInventario();
     void agregarProducto(Producto);
+    double getTotal();
 };

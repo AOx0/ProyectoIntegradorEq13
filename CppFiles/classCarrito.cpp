@@ -2,16 +2,14 @@
 
 void Carrito::mostrarCarrito() {
     datosUsuario.mostrarDatos();
-    double total = 0;
     printf("\nCarrito: \n");
     int i = 0;
     for (auto prod : aComprar) {
         prod.mostrarProducto(i);
-        total += prod.getPrecioTotal();
         i++;
     }
 
-    i != 0 ? printf("A pagar: %lf\n", total) : printf("Parece que el carrito está vacío :/\n");
+    i != 0 ? printf("A pagar: %.2lf\n", this->getTotal()) : printf("Parece que el carrito está vacío :/\n");
 }
 
 void Carrito::agregarProducto(Producto prod) {
@@ -30,4 +28,13 @@ void Carrito::agregarProducto(Producto prod) {
     puts("El producto fue agregado al carrito correctamente");
     prod.mostrarProducto(-1);
 
+}
+
+double Carrito::getTotal() {
+    double total = 0.0;
+    for (auto prod : aComprar) {
+        total += prod.getPrecioTotal();
+    }
+
+    return total;
 }

@@ -57,23 +57,23 @@ int main() {
             case -1: carrito.inventario.MostrarInventario(); break;
             case -2: carrito.mostrarCarrito(); break;
             default:
-            {
-                printf("Escriba la cantidad del producto a agregar al carrito: ");
-                cin>> cantidad;
+                {
+                    printf("Escriba la cantidad del producto a agregar al carrito: ");
+                    cin >> cantidad;
 
-                Producto productoParaAgregar = carrito.inventario.eliminarProducto(id, cantidad);
+                    Producto productoParaAgregar = carrito.inventario.eliminarProducto(id, cantidad);
 
-                if (productoParaAgregar.getNombre() != "Err") {
-                    carrito.agregarProducto(productoParaAgregar);
+                    if (productoParaAgregar.getNombre() != "Err") {
+                        carrito.agregarProducto(productoParaAgregar);
+                    }
                 }
-            }
                 break;
         }
 
-        printf("%d", id);
+
     }
 
-
+    printf("\nExcelente! Total a pagar: %.2lf\nVuelva pronto :D!!", carrito.getTotal());
 
 
     return 0;
