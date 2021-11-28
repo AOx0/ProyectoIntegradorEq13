@@ -1,23 +1,32 @@
 #pragma once
 
 #include <string>
+#include <utility>
 
 #include "classUsuario.h"
 #include "classProducto.h"
+#include "classInventario.h"
+#include <vector>
+
 
 using namespace std;
 
 class Carrito {
-    private:
-        Usuario datosUsuario;
-        int size;
-        Producto (&productos)[];
-    public:
-        Carrito(Producto c[], int size, Usuario datosUsuario) :
-        productos(reinterpret_cast<Producto (&)[]>(*c)),
-        datosUsuario(datosUsuario),
-        size(size){};
 
-        void mostrarCarrito();
-        void mostrarInventario();
+private:
+
+    Usuario datosUsuario;
+
+    vector<Producto> aComprar;
+public:
+    Inventario inventario;
+
+    Carrito(Usuario datosUsuario, Inventario inventario)
+    : aComprar(vector<Producto>())
+    , datosUsuario(std::move(datosUsuario))
+    , inventario(inventario) {};
+
+    void mostrarCarrito();
+    void agregarProducto(Producto);
+    double getTotal();
 };

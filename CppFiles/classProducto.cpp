@@ -8,6 +8,31 @@ void Producto::mostrarProducto(int num= -1) {
     );
 }
 
-double Producto::obtenerPrecioTotal() {
+double Producto::getPrecioTotal() {
     return precio * cantidad;
+}
+
+int Producto::getSize(Producto * array) {
+    int size = 0;
+    while (true) {
+        if (array[size]._flag == 874834909249234.28347242384 ) size ++;
+        else break;
+    }
+    return size;
+}
+
+void Producto::lessCantidad(int c = 1) {
+    cantidad -= c;
+}
+
+int Producto::getCantidad() {
+    return cantidad;
+}
+
+string Producto::getNombre() {
+    return nombre;
+}
+
+double Producto::getPrecio() {
+    return precio;
 }
