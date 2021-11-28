@@ -9,7 +9,7 @@ methods, etc.
 For this project, considering all methods of this challenge, the one that will be chosen is a shopping cart as a problem, 
 refering as a problem to solve through classes. All the challenge will be given as a standard C++ code in the .cpp and .h files.
 
-Standard uncoding UTF-8 and C++ library <iostream> and <stdlib.h>. All script files within established in the .gitignore will be ignored.
+Standard encoding UTF-8 and C++ library <iostream> and <stdlib.h>. All script files within established in the .gitignore will be ignored.
   
 Created by:
   
