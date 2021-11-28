@@ -12,8 +12,9 @@ refering as a problem to solve through classes. All the challenge will be given 
 Standard uncoding UTF-8 and C++ library <iostream> and <stdlib.h>. All script files within established in the .gitignore will be ignored.
   
 Created by:
-  Luis Fernando De León Silva (A01754574(
-  Ramón Habib Zavala Rivas (A01641328)
+  
+Luis Fernando De León Silva (A01754574)
+Ramón Habib Zavala Rivas (A01641328)
 
 Instituto Tecnológico de Estudios Superiores de Monterrey.
   
