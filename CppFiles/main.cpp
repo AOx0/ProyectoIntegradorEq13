@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     string nombre, direccion;
-    int edad, id;
+    int edad, id, cantidad;
 
     puts("Bienvenido a SSSSSS Online!");
     Producto productos[5] = {
@@ -39,7 +39,7 @@ int main() {
     inv.MostrarInventario();
 
     while (true) {
-
+        id = 0;
 
         puts("\nEscriba el ID del producto que desea agregar al carrito");
         puts("O escriba \"-1\" para mostrar el inventario resultante");
@@ -50,11 +50,23 @@ int main() {
 
         if (id == -3) break;
 
-        if (id < -2 || id > carrito.inventario.getSize()) puts("Ingresa un ID válido");
+        if (id < -2 || id > carrito.inventario.getSize()) {puts("Ingresa un ID válido"); continue;}
 
         switch (id) {
             case -1: carrito.inventario.MostrarInventario(); break;
             case -2: carrito.mostrarCarrito(); break;
+            default:
+            {
+                printf("Escriba la cantidad del producto a agregar al carrito: ");
+                cin>> cantidad;
+
+                Producto productoParaAgregar = carrito.inventario.eliminarProducto(id, cantidad);
+
+                if (productoParaAgregar.getNombre() != "Err") {
+                    carrito.agregarProducto(productoParaAgregar);
+                }
+            }
+                break;
         }
 
         printf("%d", id);

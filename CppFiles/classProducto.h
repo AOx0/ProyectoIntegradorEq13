@@ -16,6 +16,10 @@ public:
 
     double getPrecioTotal();
     int getCantidad();
+    double getPrecio();
+    string getNombre();
+
+
     void mostrarProducto(int);
 
     void lessCantidad(int);

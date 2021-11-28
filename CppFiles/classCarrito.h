@@ -26,4 +26,5 @@ public:
 
     void mostrarCarrito();
     void mostrarInventario();
+    void agregarProducto(Producto);
 };

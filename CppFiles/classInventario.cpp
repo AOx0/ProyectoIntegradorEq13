@@ -9,13 +9,19 @@ int Inventario::getSize() {
     return size;
 }
 
-bool Inventario::eliminarProducto(int i, int cantidad) {
-    if (producto[i].getCantidad()-cantidad > 0) {
+Producto Inventario::eliminarProducto(int i, int cantidad) {
+    if (producto[i].getCantidad()-cantidad >= 0) {
         producto[i].lessCantidad(cantidad);
-        return true;
+
+        Producto prod  = this->getProductoAtIndex(i);
+        return *new Producto(prod.getPrecio(), prod.getNombre(), cantidad);
     } else {
         printf("Lo siento, no hay suficientes ejemplares del producto en existencia");
-        return false;
+        return *new Producto(0, "Err", 0);
     }
 
+}
+
+Producto Inventario::getProductoAtIndex(int i) {
+    return producto[i];
 }

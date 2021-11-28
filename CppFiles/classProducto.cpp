@@ -28,3 +28,11 @@ void Producto::lessCantidad(int c = 1) {
 int Producto::getCantidad() {
     return cantidad;
 }
+
+string Producto::getNombre() {
+    return nombre;
+}
+
+double Producto::getPrecio() {
+    return precio;
+}

@@ -18,5 +18,6 @@ public:
 
     void MostrarInventario();
     int getSize() ;
-    bool eliminarProducto(int, int);
+    Producto eliminarProducto(int id, int cantidad);
+    Producto getProductoAtIndex(int i);
 };
