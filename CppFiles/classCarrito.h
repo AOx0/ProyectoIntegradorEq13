@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <utility>
 
 #include "classUsuario.h"
 #include "classProducto.h"
@@ -13,12 +14,9 @@ class Carrito {
 private:
     Usuario datosUsuario;
     int size;
-    Producto (&productos)[];
+    Producto * productos;
 public:
-    Carrito(Producto c[], int size, Usuario datosUsuario) :
-    productos(reinterpret_cast<Producto (&)[]>(*c)),
-    datosUsuario(datosUsuario),
-    size(size){};
+    Carrito(Producto c[], Usuario datosUsuario) : productos(c), datosUsuario(std::move(datosUsuario)), size(Producto::getSize(c)){};
 
     void mostrarCarrito();
     void mostrarInventario();

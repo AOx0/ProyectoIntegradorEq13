@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <string>
 #include "classProducto.h"
 
@@ -10,9 +11,10 @@ using namespace std;
 class Inventario {
 private:
     int size;
-    Producto (&cantidad)[] ;
+    Producto * cantidad ;
 public:
-    Inventario(Producto c[], int size): size(size), cantidad(reinterpret_cast<Producto (&)[]>(*c)) {};
+
+    Inventario(Producto c[]): cantidad(c), size(Producto::getSize(c)) {};
 
     void MostrarInventario();
 };
