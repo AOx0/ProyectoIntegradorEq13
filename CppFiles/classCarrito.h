@@ -8,10 +8,11 @@
 #include "classInventario.h"
 #include <vector>
 
+
 using namespace std;
 
-
 class Carrito {
+
 private:
 
     Usuario datosUsuario;

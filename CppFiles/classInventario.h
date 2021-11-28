@@ -1,14 +1,14 @@
 #pragma once
 
 #include <iostream>
+
 #include <string>
 #include "classProducto.h"
 
-
 using namespace std;
 
-
 class Inventario {
+
 private:
     int size;
     Producto * producto ;
@@ -20,4 +20,5 @@ public:
     int getSize() ;
     Producto eliminarProducto(int id, int cantidad);
     Producto getProductoAtIndex(int i);
+
 };

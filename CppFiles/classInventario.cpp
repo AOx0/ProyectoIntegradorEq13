@@ -2,6 +2,7 @@
 
 void Inventario::MostrarInventario() {
     printf("\nInventario: \n");
+
     for (int i=0; i<size; i++) producto[i].mostrarProducto(i);
 }
 

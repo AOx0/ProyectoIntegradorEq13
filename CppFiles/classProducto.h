@@ -5,6 +5,7 @@
 using namespace std;
 
 class Producto {
+
 private:
     double precio;
     string nombre;
@@ -25,6 +26,7 @@ public:
     void lessCantidad(int);
 
     static int getSize(Producto *);
+
 
 };
 

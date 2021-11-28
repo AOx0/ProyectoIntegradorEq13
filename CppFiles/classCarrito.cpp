@@ -38,3 +38,4 @@ double Carrito::getTotal() {
 
     return total;
 }
+

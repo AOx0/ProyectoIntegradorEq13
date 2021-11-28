@@ -1,6 +1,6 @@
 #include <iostream>
-#include <classInventario.h>
-#include <classCarrito.h>
+#include "classInventario.h"
+#include "classCarrito.h"
 
 using namespace std;
 
@@ -10,12 +10,14 @@ int main() {
 
     puts("Bienvenido a SSSSSS Online!");
     Producto productos[5] = {
+
             Producto(33.9, "Jabón", 3),
             Producto(45.4, "Cereal", 4),
             Producto(203, "Salchichas", 2),
             Producto(150, "Queso", 3),
             Producto(25, "Sal", 2)
     };
+
 
     Inventario inv = *new Inventario(productos);
 
@@ -73,8 +75,9 @@ int main() {
 
     }
 
-    printf("\nExcelente! Total a pagar: %.2lf\nVuelva pronto :D!!", carrito.getTotal());
 
+    printf("\nExcelente! Total a pagar: %.2lf\nVuelva pronto :D!!", carrito.getTotal());
 
     return 0;
 }
+
