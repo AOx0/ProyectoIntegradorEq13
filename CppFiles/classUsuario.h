@@ -1,10 +1,10 @@
 #pragma once
-
 #include <string>
 
 using namespace std;
 
 class Usuario {
+    
     private:
         string nombre, direccion;
         int edad;
@@ -12,6 +12,7 @@ class Usuario {
     public:
         Usuario(string nombre, string direccion, int edad): nombre(nombre), direccion(direccion), edad(edad){};
 
+        // Getter to show user data
         void mostrarDatos();
 };
 

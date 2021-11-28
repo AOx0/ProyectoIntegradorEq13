@@ -1,32 +1,32 @@
 #pragma once
-
 #include <string>
 #include <utility>
-
 #include "classUsuario.h"
 #include "classProducto.h"
 #include "classInventario.h"
 #include <vector>
 
-
 using namespace std;
 
 class Carrito {
 
-private:
+    private:
+        Usuario datosUsuario;
 
-    Usuario datosUsuario;
+        // Vectore used to store data
+        vector<Producto> aComprar;
 
-    vector<Producto> aComprar;
-public:
-    Inventario inventario;
+    public:
+        Inventario inventario;
 
-    Carrito(Usuario datosUsuario, Inventario inventario)
-    : aComprar(vector<Producto>())
-    , datosUsuario(std::move(datosUsuario))
-    , inventario(inventario) {};
+        // Constructor declared 
+        Carrito(Usuario datosUsuario, Inventario inventario) : 
+            aComprar(vector<Producto>()), datosUsuario(std::move(datosUsuario)), inventario(inventario) 
+        {};
 
-    void mostrarCarrito();
-    void agregarProducto(Producto);
-    double getTotal();
+        // Getter and setter to show and change data
+        void mostrarCarrito();
+        void agregarProducto(Producto);
+        
+        double getTotal();
 };
